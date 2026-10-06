@@ -18,7 +18,6 @@ public class LoginPage {
 
 
     public LoginPage openPage() {
-
         open("https://thinking-tester-contact-list.herokuapp.com/");
         $(".welcome-message").shouldHave(text(WELCOME_MESSAGE));
 //        executeAsyncJavaScript("$('#fixedban').remove()");

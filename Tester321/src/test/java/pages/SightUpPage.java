@@ -1,10 +1,9 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
 import locators.SelenideElements;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
 
 public class SightUpPage {
 
@@ -13,16 +12,8 @@ public class SightUpPage {
 
     private SelenideElements elements = new SelenideElements(); //тут я создал экземпляр класса
 
-//    private SelenideElement
-//            signUpButtonPress = $("#signup");
-//        firstNameInput = $('#firstName'),
-//        lastNameInput = $('#lastName'),
-//        emailInput = $("#email"),
-//        passwordInput = ("#password");
-
 
     public SightUpPage openSignUpPage() {
-
         open("https://thinking-tester-contact-list.herokuapp.com/");
 
         return this;
@@ -64,5 +55,12 @@ public class SightUpPage {
         elements.passwordInput.setValue(value);
 
         return this;
+    }
+
+    public SightUpPage clickSignUpButtonIsDisplayed() {
+        elements.signUpButtonPress.isDisplayed();
+
+        return this;
+
     }
 }
