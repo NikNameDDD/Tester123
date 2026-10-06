@@ -28,6 +28,7 @@ public class ContactListPage {
 
 
     public ContactListPage checkNoteClickOnAnyContact() {
+
         elements.ckickOnAnyContact.shouldHave(text(CLICK_ON_ANY_CONTACT_NOTE));
 
         return this;
@@ -35,6 +36,7 @@ public class ContactListPage {
     }
 
     public ContactListPage checkingForExistenceTable() {
+
         elements.columsInformation.isDisplayed();
 
         return this;
@@ -51,6 +53,7 @@ public class ContactListPage {
     }
 
     public ContactListPage logOutClick() {
+
         elements.logOutButton.click();
 
         return this;
@@ -58,7 +61,3 @@ public class ContactListPage {
     }
 
 }
-
-
-
-

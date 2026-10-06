@@ -1,6 +1,6 @@
 package test;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.ContactDetailsPage;
@@ -11,9 +11,9 @@ public class ContactDetailsTest extends TestBase {
 
 
     @DisplayName("Успешная авторизация")
-    @BeforeAll
-    static void LoginHelp() {
-        AuthHelper.login();
+    @BeforeEach
+    void LoginHelp() {
+        AuthHelper.login(AuthHelper.VALID_EMAIL, AuthHelper.VALID_PASSWORD);
     }
 
 

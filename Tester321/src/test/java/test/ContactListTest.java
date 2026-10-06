@@ -1,6 +1,6 @@
 package test;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.ContactListPage;
 import utils.AuthHelper;
@@ -8,9 +8,9 @@ import utils.AuthHelper;
 public class ContactListTest extends TestBase {
 
 
-    @BeforeAll
-    static void LoginHelp() {
-        AuthHelper.login();
+    @BeforeEach
+    void LoginHelp() {
+        AuthHelper.login(AuthHelper.VALID_EMAIL, AuthHelper.VALID_PASSWORD);
     }
 
 

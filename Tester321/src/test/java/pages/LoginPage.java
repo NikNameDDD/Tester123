@@ -1,6 +1,7 @@
 package pages;
 
 import locators.SelenideElements;
+import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -50,15 +51,12 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage submitButtonIsDisplayed() {
-        elements.submitButton.isDisplayed();
-
-        return this;
+    public boolean submitButtonIsDisplayed() {
+        return elements.submitButton.isDisplayed();
     }
 
     public LoginPage submitButtonClick() {
         elements.submitButton.click();
-
         return this;
     }
 }

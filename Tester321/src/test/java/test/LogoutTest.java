@@ -13,7 +13,7 @@ public class LogoutTest extends TestBase {
 
     @BeforeEach
     void setUp() {
-        AuthHelper.login();
+        AuthHelper.login(AuthHelper.VALID_EMAIL, AuthHelper.VALID_PASSWORD);
         // Инициализируем объекты заново перед каждым тестом
         contactListPage = new ContactListPage();
         sightUpPage = new SightUpPage();
