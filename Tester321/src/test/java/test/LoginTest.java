@@ -28,8 +28,8 @@ public class LoginTest extends TestBase {
 
         // Проверяем, что отображается сообщение об ошибке
         // Предполагается, что в LoginPage есть метод errorMessageIsDisplayed() или getErrorMessageText()
-        //Assertions.assertTrue(loginPage.errorMessageIsDisplayed(),
-        //        "Сообщение об ошибке при неверном пароле не отобразилось!");
+        Assertions.assertTrue(loginPage.errorMessageIsDisplayed(),
+               "Сообщение об ошибке при неверном пароле не отобразилось!");
 
         // Альтернативный вариант с проверкой текста (если метод возвращает String):
         // Assertions.assertEquals("Неверный логин или пароль", loginPage.getErrorMessageText());

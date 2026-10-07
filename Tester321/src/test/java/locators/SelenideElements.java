@@ -17,12 +17,10 @@ public class SelenideElements {
             ckickOnAnyContact = $x("//div/p[1]"),
             dataContactLineInTable = $x("//*[@id='myTable']/tr"),
             contactDetailsBigNote = $x("//h1[text() = 'Contact Details']"),
-            //columsList = $("tr th"),
-            labelElementsOnCotactDetailsPage = $("label"),
             logOutButton = $("#logout"),
-            columsInformation = $("#contactTableHead");
-
-
+            columsInformation = $("#contactTableHead"),
+            errorMessage = $("#error"),
+            addNewContactButton = $("#add-contact");
 
 
 }

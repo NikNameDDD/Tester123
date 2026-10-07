@@ -3,6 +3,7 @@ package pages;
 import locators.SelenideElements;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SightUpPage {
@@ -22,6 +23,13 @@ public class SightUpPage {
 
     public SightUpPage clickSignUpButton() {
         elements.signUpButtonPress.click();
+
+        return this;
+
+    }
+
+    public SightUpPage clicksubmitButton() {
+        elements.submitButton.click();
 
         return this;
 
@@ -62,5 +70,13 @@ public class SightUpPage {
 
         return this;
 
+    }
+
+    public boolean successMessageIsDisplayed() {
+        return elements.addNewContactButton.shouldBe(visible).isDisplayed();
+    }
+
+    public boolean errorMessageIsDisplayed() {
+        return elements.errorMessage.shouldBe(visible).isDisplayed();
     }
 }
