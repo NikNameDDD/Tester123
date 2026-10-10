@@ -56,4 +56,8 @@ public class LoginPage {
     public boolean errorMessageIsDisplayed() {
         return elements.errorMessage.shouldBe(visible).isDisplayed();
     }
+
+    public String getErrorMessageText() {
+        return elements.errorMessage.getText();
+    }
 }

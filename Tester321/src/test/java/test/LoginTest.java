@@ -3,6 +3,8 @@ package test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import pages.LoginPage;
 import utils.AuthHelper;
 
@@ -18,20 +20,28 @@ public class LoginTest extends TestBase {
         // Assertions.assertTrue(new DashboardPage().isUserLoggedIn(), "Пользователь не авторизовался!");
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "wrong_password_123, 'Incorrect username or password'",
+            " , 'Incorrect username or password'",
+            "invalidPassword, 'Incorrect username or password'"
+    })
     @DisplayName("Неуспешный логин с невалидным паролем")
-    @Test
-    void loginWithInvalidPassword() {
-        String invalidPassword = "wrong_password_123";
+    void loginWithInvalidPassword(
+            String invalidPassword,
+            String expectedErrorMessage
+    ) {
 
-        // Пытаемся войти с неверным паролем
-        LoginPage loginPage = AuthHelper.login(AuthHelper.VALID_EMAIL, invalidPassword);
+        AuthHelper.login(AuthHelper.VALID_EMAIL, invalidPassword);
 
-        // Проверяем, что отображается сообщение об ошибке
-        // Предполагается, что в LoginPage есть метод errorMessageIsDisplayed() или getErrorMessageText()
-        Assertions.assertTrue(loginPage.errorMessageIsDisplayed(),
-               "Сообщение об ошибке при неверном пароле не отобразилось!");
+        Assertions.assertTrue(
+                loginPage.errorMessageIsDisplayed(),
+                "Сообщение об ошибке не отобразилось!"
+        );
 
-        // Альтернативный вариант с проверкой текста (если метод возвращает String):
-        // Assertions.assertEquals("Неверный логин или пароль", loginPage.getErrorMessageText());
+        Assertions.assertEquals(
+                expectedErrorMessage,
+                loginPage.getErrorMessageText()
+        );
     }
 }
