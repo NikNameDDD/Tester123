@@ -23,7 +23,7 @@ public class ContactDetailsTest extends TestBase {
         new ContactDetailsPage()
                 .clickOnAnyDataLine()
                 .noteBiGNOteOnfoter()
-                .SUPERTEST();
+                .contactDetailsChech();
 
     }
 }

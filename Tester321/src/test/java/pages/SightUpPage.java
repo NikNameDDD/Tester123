@@ -1,82 +1,86 @@
 package pages;
 
 import locators.SelenideElements;
+import utils.BETA_TEST;
+import utils.CONSTANTS;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SightUpPage {
-
-    private final String SIGH_UP_MESSAGE =
-            "Sign up to begin adding your contacts!";
-
-    private SelenideElements elements = new SelenideElements(); //тут я создал экземпляр класса
+public class SightUpPage extends BETA_TEST {
 
 
     public SightUpPage openSignUpPage() {
         open("https://thinking-tester-contact-list.herokuapp.com/");
 
         return this;
+
     }
 
-
     public SightUpPage clickSignUpButton() {
-        elements.signUpButtonPress.click();
+        getElements().signUpButtonPress.click();
 
         return this;
 
     }
 
     public SightUpPage clicksubmitButton() {
-        elements.submitButton.click();
+        getElements().submitButton.click();
 
         return this;
 
     }
 
     public SightUpPage noteIsDisolayed() {
-        elements.noteDisplayed.shouldHave(text(SIGH_UP_MESSAGE));
+        getElements().noteDisplayed.shouldHave(text(CONSTANTS.SIGH_UP_MESSAGE));
 
         return this;
+
     }
 
     public SightUpPage setFirstName(String value) {
-        elements.firstNameInput.setValue(value);
+        getElements().firstNameInput.setValue(value);
 
         return this;
+
     }
 
     public SightUpPage setLastName(String value) {
-        elements.lastNameInput.setValue(value);
+        getElements().lastNameInput.setValue(value);
 
         return this;
+
     }
 
     public SightUpPage setEmail(String value) {
-        elements.emailInput.setValue(value);
+        getElements().emailInput.setValue(value);
 
         return this;
+
     }
 
     public SightUpPage setPassword(String value) {
-        elements.passwordInput.setValue(value);
+        getElements().passwordInput.setValue(value);
 
         return this;
+
     }
 
     public SightUpPage clickSignUpButtonIsDisplayed() {
-        elements.signUpButtonPress.isDisplayed();
+        getElements().signUpButtonPress.isDisplayed();
 
         return this;
 
     }
 
     public boolean successMessageIsDisplayed() {
-        return elements.addNewContactButton.shouldBe(visible).isDisplayed();
+        return getElements().addNewContactButton.shouldBe(visible).isDisplayed();
+
     }
 
     public boolean errorMessageIsDisplayed() {
-        return elements.errorMessage.shouldBe(visible).isDisplayed();
+        return getElements().errorMessage.shouldBe(visible).isDisplayed();
+
     }
 }

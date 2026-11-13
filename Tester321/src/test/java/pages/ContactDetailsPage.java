@@ -1,49 +1,32 @@
 package pages;
 
 import com.codeborne.selenide.ElementsCollection;
-import locators.SelenideElements;
+import utils.BETA_TEST;
+import utils.CONSTANTS;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class ContactDetailsPage {
+public class ContactDetailsPage extends BETA_TEST {
 
-    SelenideElements elements = new SelenideElements();
-
-    private final String BIG_NOTE = "Contact Details";
-
-    private final String[] TESTER_TESTER = {
-            "First Name:",
-            "Last Name:",
-            "Date of Birth:",
-            "Email:",
-            "Phone:",
-            "Street Address 1:",
-            "Street Address 2:",
-            "City:",
-            "State or Province:",
-            "Postal Code:",
-            "Country:"
-
-    };
 
     public ContactDetailsPage noteBiGNOteOnfoter() {
-        elements.contactDetailsBigNote.shouldHave(text(BIG_NOTE));
+        getElements().contactDetailsBigNote.shouldHave(text(CONSTANTS.CONTACT_DETAILS_BIG_NOTE));
 
         return this;
     }
 
     public ContactDetailsPage clickOnAnyDataLine() {
-        elements.dataContactLineInTable.click();
+        getElements().dataContactLineInTable.click();
 
         return this;
     }
 
-    public ContactDetailsPage SUPERTEST() {
+    public ContactDetailsPage contactDetailsChech() {
 
         ElementsCollection headers = $$("label");
-        headers.shouldHave(exactTexts(TESTER_TESTER));
+        headers.shouldHave(exactTexts(CONSTANTS.CONTACT_DETAILS_CHECK));
 
         return this;
 

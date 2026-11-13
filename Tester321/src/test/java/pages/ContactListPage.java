@@ -1,35 +1,19 @@
 package pages;
 
 import com.codeborne.selenide.ElementsCollection;
-import locators.SelenideElements;
+import utils.BETA_TEST;
+import utils.CONSTANTS;
 
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class ContactListPage {
-
-    private SelenideElements elements = new SelenideElements();
-
-    private final String CLICK_ON_ANY_CONTACT_NOTE = "Click on any contact" +
-            " to view the Contact Details";
-
-    private final String[] EXPECTED_HEADERS = {
-            "Name",
-            "Birthdate",
-            "Email",
-            "Phone",
-            "Address",
-            "City, State/Province, Postal Code",
-            "Country"
-
-    };
-
+public class ContactListPage extends BETA_TEST {
 
     public ContactListPage checkNoteClickOnAnyContact() {
 
-        elements.ckickOnAnyContact.shouldHave(text(CLICK_ON_ANY_CONTACT_NOTE));
+        getElements().ckickOnAnyContact.shouldHave(text(CONSTANTS.CLICK_ON_ANY_CONTACT_NOTE));
 
         return this;
 
@@ -37,7 +21,7 @@ public class ContactListPage {
 
     public ContactListPage checkingForExistenceTable() {
 
-        elements.columsInformation.isDisplayed();
+        getElements().columsInformation.isDisplayed();
 
         return this;
 
@@ -46,7 +30,7 @@ public class ContactListPage {
     public ContactListPage checkingColumsList() {
 
         ElementsCollection headers = $$("tr th");
-        headers.shouldHave(exactTexts(EXPECTED_HEADERS));
+        headers.shouldHave(exactTexts(CONSTANTS.EXPECTED_HEADERS));
 
         return this;
 
@@ -54,10 +38,15 @@ public class ContactListPage {
 
     public ContactListPage logOutClick() {
 
-        elements.logOutButton.click();
+        getElements().logOutButton.click();
 
         return this;
 
+    }
+
+    public ContactListPage clickAddNewContact() {
+
+        return null;
     }
 
 }

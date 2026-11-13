@@ -16,7 +16,7 @@ public class SelenideElements {
             submitButton = $("#submit"),
             ckickOnAnyContact = $x("//div/p[1]"),
             dataContactLineInTable = $x("//*[@id='myTable']/tr"),
-            contactDetailsBigNote = $x("//h1[text() = 'Contact Details']"),
+            contactDetailsBigNote = $x("//h1 [text() = 'Contact Details']"),
             logOutButton = $("#logout"),
             columsInformation = $("#contactTableHead"),
             errorMessage = $("#error"),
