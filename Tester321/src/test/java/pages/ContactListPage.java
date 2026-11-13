@@ -6,21 +6,21 @@ import utils.CONSTANTS;
 
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
+import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class ContactListPage extends BETA_TEST {
 
     public ContactListPage checkNoteClickOnAnyContact() {
-
-        getElements().ckickOnAnyContact.shouldHave(text(CONSTANTS.CLICK_ON_ANY_CONTACT_NOTE));
+        getElements().ckickOnAnyContact
+                .shouldHave(text(CONSTANTS.CLICK_ON_ANY_CONTACT_NOTE));
 
         return this;
 
     }
 
     public ContactListPage checkingForExistenceTable() {
-
         getElements().columsInformation.isDisplayed();
 
         return this;
@@ -28,7 +28,6 @@ public class ContactListPage extends BETA_TEST {
     }
 
     public ContactListPage checkingColumsList() {
-
         ElementsCollection headers = $$("tr th");
         headers.shouldHave(exactTexts(CONSTANTS.EXPECTED_HEADERS));
 
@@ -37,7 +36,6 @@ public class ContactListPage extends BETA_TEST {
     }
 
     public ContactListPage logOutClick() {
-
         getElements().logOutButton.click();
 
         return this;
@@ -45,8 +43,16 @@ public class ContactListPage extends BETA_TEST {
     }
 
     public ContactListPage clickAddNewContact() {
+        getElements().addNewContactButton.click();
 
         return null;
+
     }
 
+    public ContactListPage verifyaddNewContactButtonEnabled() {
+        getElements().addNewContactButton.shouldBe(enabled);
+
+        return this;
+
+    }
 }

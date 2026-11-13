@@ -20,6 +20,8 @@ public class SelenideElements {
             logOutButton = $("#logout"),
             columsInformation = $("#contactTableHead"),
             errorMessage = $("#error"),
+            addContactNote = $x("//h1 [text() = 'Add Contact']"),
+            cancelButton = $("#cancel"),
             addNewContactButton = $("#add-contact");
 
 

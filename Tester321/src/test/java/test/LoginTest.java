@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import utils.AuthHelper;
+import utils.CONSTANTS;
 
 public class LoginTest extends TestBase {
 
@@ -13,7 +14,7 @@ public class LoginTest extends TestBase {
     @Test
     void loginWithValidData() {
         // Авторизуемся с валидными данными
-        AuthHelper.login(AuthHelper.VALID_EMAIL, AuthHelper.VALID_PASSWORD);
+        AuthHelper.login(CONSTANTS.VALID_EMAIL, CONSTANTS.VALID_PASSWORD);
 
         // TODO: Добавьте проверку успешного входа. Например:
         // Assertions.assertTrue(new DashboardPage().isUserLoggedIn(), "Пользователь не авторизовался!");
@@ -31,7 +32,7 @@ public class LoginTest extends TestBase {
             String expectedErrorMessage
     ) {
 
-        AuthHelper.login(AuthHelper.VALID_EMAIL, invalidPassword);
+        AuthHelper.login(CONSTANTS.VALID_EMAIL, invalidPassword);
 
         Assertions.assertTrue(
                 loginPage.errorMessageIsDisplayed(),

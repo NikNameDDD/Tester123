@@ -2,6 +2,9 @@ package utils;
 
 public class CONSTANTS {
 
+    public static final String VALID_EMAIL = "niknamed300@mail.ru";
+    public static final String VALID_PASSWORD = "nikitax57N123!";
+
     public static final String CONTACT_DETAILS_BIG_NOTE = "Contact Details";
 
     public static final String[] CONTACT_DETAILS_CHECK = {
@@ -39,7 +42,7 @@ public class CONSTANTS {
             "Welcome! This application is for testing purposes only." +
                     " The database will be purged as needed to keep costs down.";
 
-
+    public static String ADD_CONTACT_NOTE = "Add Contact";
 
     private CONSTANTS() {
         // Utility class: запрещаем создание объекта

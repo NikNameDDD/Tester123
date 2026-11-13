@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.ContactDetailsPage;
 import utils.AuthHelper;
+import utils.CONSTANTS;
 
 public class ContactDetailsTest extends TestBase {
 
@@ -13,7 +14,7 @@ public class ContactDetailsTest extends TestBase {
     @DisplayName("Успешная авторизация")
     @BeforeEach
     void LoginHelp() {
-        AuthHelper.login(AuthHelper.VALID_EMAIL, AuthHelper.VALID_PASSWORD);
+        AuthHelper.login(CONSTANTS.VALID_EMAIL, CONSTANTS.VALID_PASSWORD);
     }
 
 
