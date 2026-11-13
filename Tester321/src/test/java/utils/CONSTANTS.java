@@ -35,6 +35,10 @@ public class CONSTANTS {
     public static final String SIGH_UP_MESSAGE =
             "Sign up to begin adding your contacts!";
 
+    public static String WELCOME_MESSAGE =
+            "Welcome! This application is for testing purposes only." +
+                    " The database will be purged as needed to keep costs down.";
+
 
 
     private CONSTANTS() {
