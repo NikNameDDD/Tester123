@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class ContactListPage extends BETA_TEST {
 
     public ContactListPage checkNoteClickOnAnyContact() {
-        getElements().ckickOnAnyContact
+        getElements().clickOnAnyContact
                 .shouldHave(text(CONSTANTS.CLICK_ON_ANY_CONTACT_NOTE));
 
         return this;
@@ -21,7 +21,7 @@ public class ContactListPage extends BETA_TEST {
     }
 
     public ContactListPage checkingForExistenceTable() {
-        getElements().columsInformation.isDisplayed();
+        getElements().columnsInformation.isDisplayed();
 
         return this;
 

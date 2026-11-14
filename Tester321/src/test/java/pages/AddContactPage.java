@@ -1,14 +1,13 @@
 package pages;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import test.TestBase;
-import utils.AuthHelper;
+import com.codeborne.selenide.ElementsCollection;
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 
-import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.CollectionCondition.exactTexts;
+import static com.codeborne.selenide.CollectionCondition.size;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class AddContactPage extends BETA_TEST {
 
@@ -33,11 +32,20 @@ public class AddContactPage extends BETA_TEST {
 
     }
 
+    public AddContactPage checkMainWords() {
+        ElementsCollection headersLabel = $$("label");
+        headersLabel.shouldHave(exactTexts(CONSTANTS.ADD_CONTACTS_INPUT_DATA));
 
+        return this;
 
+    }
 
+    public AddContactPage checkMainWordsInputs() {
+        ElementsCollection headersInput = $$("#add-contact input");
+        headersInput.shouldBe(size(11));
 
-
-
+        return this;
+    }
 
 }
+

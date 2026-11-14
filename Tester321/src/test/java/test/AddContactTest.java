@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.AddContactPage;
-import pages.ContactDetailsPage;
 import pages.ContactListPage;
 import utils.AuthHelper;
 import utils.CONSTANTS;
@@ -30,7 +29,9 @@ public class AddContactTest extends TestBase {
         new ContactListPage()
                 .verifyaddNewContactButtonEnabled()
                 .clickAddNewContact();
-
+        new AddContactPage()
+                .checkMainWords()
+                .checkMainWordsInputs();
     }
 
 

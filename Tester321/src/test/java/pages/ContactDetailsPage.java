@@ -20,8 +20,7 @@ public class ContactDetailsPage extends BETA_TEST {
     }
 
     public ContactDetailsPage clickOnAnyDataLine() {
-        getElements()
-                .dataContactLineInTable.click();
+        getElements().dataContactLineInTable.click();
 
         return this;
 
