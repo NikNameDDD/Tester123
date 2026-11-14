@@ -9,14 +9,11 @@ import utils.CONSTANTS;
 
 public class ContactDetailsTest extends TestBase {
 
-
-
     @DisplayName("Успешная авторизация")
     @BeforeEach
     void LoginHelp() {
         AuthHelper.login(CONSTANTS.VALID_EMAIL, CONSTANTS.VALID_PASSWORD);
     }
-
 
     @DisplayName("Проверка наличия полей и кнопок на странице с данным о контакте")
     @Test
@@ -24,7 +21,11 @@ public class ContactDetailsTest extends TestBase {
         new ContactDetailsPage()
                 .clickOnAnyDataLine()
                 .noteBiGNOteOnfoter()
-                .contactDetailsChech();
+                .contactDetailsCheck()
+                .verifyEditContactButton()
+                .verifyDeleteButton()
+                .verifyReturnToContactButton()
+                .verifyLogOutButton();
 
     }
 }

@@ -1,12 +1,10 @@
 package pages;
 
-import com.codeborne.selenide.ElementsCollection;
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Condition.*;
 
 public class ContactDetailsPage extends BETA_TEST {
 
@@ -26,9 +24,39 @@ public class ContactDetailsPage extends BETA_TEST {
 
     }
 
-    public ContactDetailsPage contactDetailsChech() {
-        ElementsCollection headers = $$("label");
-        headers.shouldHave(exactTexts(CONSTANTS.CONTACT_DETAILS_CHECK));
+
+    public ContactDetailsPage contactDetailsCheck() {
+        getElements().headersContactDetailsCheck
+                .shouldHave(exactTexts(CONSTANTS.CONTACT_DETAILS_CHECK));
+
+        return this;
+
+    }
+
+
+    public ContactDetailsPage verifyEditContactButton() {
+        getElements().editContactButton.shouldBe(visible, enabled);
+
+        return this;
+
+    }
+
+    public ContactDetailsPage verifyDeleteButton() {
+        getElements().deleteContactButton.shouldBe(visible, enabled);
+
+        return this;
+
+    }
+
+    public ContactDetailsPage verifyReturnToContactButton() {
+        getElements().returneToContactButton.shouldBe(visible, enabled);
+
+        return this;
+
+    }
+
+    public ContactDetailsPage verifyLogOutButton() {
+        getElements().logOutButton.shouldBe(visible, enabled);
 
         return this;
 

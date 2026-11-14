@@ -4,15 +4,10 @@ import locators.SelenideElements;
 
 public class BETA_TEST {
 
+    private SelenideElements element = new SelenideElements();
 
-    private SelenideElements elements = new SelenideElements();
-
-    public SelenideElements getElements () {
-        return elements;
+    public SelenideElements getElements() {
+        return element;
     }
-
-
-    //тут я создал экземпляр класса
-
 
 }

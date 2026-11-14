@@ -1,6 +1,6 @@
 package pages;
 
-import com.codeborne.selenide.ElementsCollection;
+
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 
@@ -8,7 +8,7 @@ import utils.CONSTANTS;
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$$;
+
 
 public class ContactListPage extends BETA_TEST {
 
@@ -28,8 +28,8 @@ public class ContactListPage extends BETA_TEST {
     }
 
     public ContactListPage checkingColumsList() {
-        ElementsCollection headers = $$("tr th");
-        headers.shouldHave(exactTexts(CONSTANTS.EXPECTED_HEADERS));
+        getElements().headersCheckingColumnsList.
+                shouldHave(exactTexts(CONSTANTS.EXPECTED_HEADERS));
 
         return this;
 

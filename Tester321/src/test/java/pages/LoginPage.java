@@ -1,7 +1,5 @@
 package pages;
 
-import locators.SelenideElements;
-import org.junit.jupiter.api.Assertions;
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 

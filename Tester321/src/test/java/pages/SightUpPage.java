@@ -1,6 +1,5 @@
 package pages;
 
-import locators.SelenideElements;
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 

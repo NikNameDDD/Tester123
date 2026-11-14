@@ -11,7 +11,8 @@ public class ContactListTest extends TestBase {
 
     @BeforeEach
     void LoginHelp() {
-        AuthHelper.login(CONSTANTS.VALID_EMAIL,CONSTANTS.VALID_PASSWORD);
+        AuthHelper.
+                login(CONSTANTS.VALID_EMAIL,CONSTANTS.VALID_PASSWORD);
     }
 
 

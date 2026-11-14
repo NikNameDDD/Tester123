@@ -1,5 +1,6 @@
 package locators;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -22,7 +23,21 @@ public class SelenideElements {
             errorMessage = $("#error"),
             addContactNote = $x("//h1 [text() = 'Add Contact']"),
             cancelButton = $("#cancel"),
+            editContactButton = $("#edit-contact"),
+            deleteContactButton = $("#delete"),
+            returneToContactButton = $("#return"),
             addNewContactButton = $("#add-contact");
 
 
-}
+
+
+    public ElementsCollection headersContactDetailsCheck = $$("label");
+
+    public ElementsCollection headersCheckingColumnsList = $$("tr th");
+
+    public ElementsCollection headersInput = $$("#add-contact input");
+
+    public  ElementsCollection headersLabel = $$("label");
+
+
+    }
