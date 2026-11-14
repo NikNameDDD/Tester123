@@ -18,6 +18,7 @@ public class LoginTest extends TestBase {
 
         // TODO: Добавьте проверку успешного входа. Например:
         // Assertions.assertTrue(new DashboardPage().isUserLoggedIn(), "Пользователь не авторизовался!");
+        //когда спрашивал у нейроники посоветовала это пока ещё с этим не разобрался что она имела ввиду
     }
 
     @ParameterizedTest
