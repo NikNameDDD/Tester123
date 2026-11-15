@@ -20,7 +20,7 @@ public class SignUpTest extends TestBase {
                 .noteIsDisolayed()
                 .setFirstName("ILYHA")
                 .setLastName("JOPICH")
-                .setEmail("niqqk@mail.com")
+                .setEmail("niqqqk@mail.com")
                 .setPassword("SEXXXXXXXX")
                 .clicksubmitButton();
 

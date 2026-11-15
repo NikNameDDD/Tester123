@@ -6,8 +6,7 @@ import utils.CONSTANTS;
 
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
-import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 
 
 public class ContactListPage extends BETA_TEST {
@@ -49,8 +48,8 @@ public class ContactListPage extends BETA_TEST {
 
     }
 
-    public ContactListPage verifyaddNewContactButtonEnabled() {
-        getElements().addNewContactButton.shouldBe(enabled);
+    public ContactListPage verifyAddNewContactButtonEnabled() {
+        getElements().addNewContactButton.shouldBe(visible, enabled);
 
         return this;
 

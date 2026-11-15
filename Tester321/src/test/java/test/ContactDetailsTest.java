@@ -20,7 +20,7 @@ public class ContactDetailsTest extends TestBase {
     void checkingButtonsAndLabelOnPage() {
         new ContactDetailsPage()
                 .clickOnAnyDataLine()
-                .noteBiGNOteOnfoter()
+                .noteBigNoteOnFooter()
                 .contactDetailsCheck()
                 .verifyEditContactButton()
                 .verifyDeleteButton()

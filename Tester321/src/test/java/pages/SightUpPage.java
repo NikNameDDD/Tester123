@@ -67,7 +67,7 @@ public class SightUpPage extends BETA_TEST {
     }
 
     public SightUpPage clickSignUpButtonIsDisplayed() {
-        getElements().signUpButtonPress.isDisplayed();
+        getElements().signUpButtonPress.isEnabled();
 
         return this;
 

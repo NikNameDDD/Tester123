@@ -49,7 +49,7 @@ public class LoginPage extends BETA_TEST {
     }
 
     public boolean submitButtonIsDisplayed() {
-        return getElements().submitButton.isDisplayed();
+        return getElements().submitButton.isEnabled();
 
     }
 

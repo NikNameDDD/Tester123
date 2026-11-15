@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.*;
 public class ContactDetailsPage extends BETA_TEST {
 
 
-    public ContactDetailsPage noteBiGNOteOnfoter() {
+    public ContactDetailsPage noteBigNoteOnFooter() {
         getElements().contactDetailsBigNote
                 .shouldHave(text(CONSTANTS.CONTACT_DETAILS_BIG_NOTE));
 
@@ -49,7 +49,7 @@ public class ContactDetailsPage extends BETA_TEST {
     }
 
     public ContactDetailsPage verifyReturnToContactButton() {
-        getElements().returneToContactButton.shouldBe(visible, enabled);
+        getElements().returnToContactButton.shouldBe(visible, enabled);
 
         return this;
 

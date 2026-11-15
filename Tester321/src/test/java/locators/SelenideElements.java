@@ -25,7 +25,15 @@ public class SelenideElements {
             cancelButton = $("#cancel"),
             editContactButton = $("#edit-contact"),
             deleteContactButton = $("#delete"),
-            returneToContactButton = $("#return"),
+            returnToContactButton = $("#return"),
+            dateOfBirthInput = $("#birthdate"),
+            phoneInput = $("#phone"),
+            streetAddressOneInput = $("#street1"),
+            streetAddressTwoInput = $("#street2"),
+            cityInput = $("#city"),
+            stateOfProvinceInput = $("#stateProvince"),
+            postalCodeInput = $("#postalCode"),
+            countryInput = $("#country"),
             addNewContactButton = $("#add-contact");
 
 
