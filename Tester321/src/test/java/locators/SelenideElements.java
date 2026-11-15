@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SelenideElements {
 
     public SelenideElement
+
             signUpButtonPress = $("#signup"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
