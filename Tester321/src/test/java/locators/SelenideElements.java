@@ -46,7 +46,7 @@ public class SelenideElements {
 
     public ElementsCollection headersInput = $$("#add-contact input");
 
-    public  ElementsCollection headersLabel = $$("label");
+    public ElementsCollection headersLabel = $$("label");
 
 
     }
