@@ -13,7 +13,6 @@ public class LoginTest extends TestBase {
     @DisplayName("Успешный логин с валидными данными")
     @Test
     void loginWithValidData() {
-        // Авторизуемся с валидными данными
         AuthHelper.login(CONSTANTS.VALID_EMAIL, CONSTANTS.VALID_PASSWORD);
 
     }

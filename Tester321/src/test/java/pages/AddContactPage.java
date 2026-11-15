@@ -51,8 +51,6 @@ public class AddContactPage extends BETA_TEST {
 
     }
 
-    //----------------------------------------------------------------------------------------------------------------
-
     public AddContactPage inputFirstNameForAddContact(String value) {
         getElements().firstNameInput.setValue(value);
 
@@ -139,6 +137,7 @@ public class AddContactPage extends BETA_TEST {
 
     public boolean errorMessageIsDisplayed() {
         return getElements().errorMessage.shouldBe(visible).isDisplayed();
+
     }
 
     public AddContactPage verifyErrorMessageContains(String expectedText) {
