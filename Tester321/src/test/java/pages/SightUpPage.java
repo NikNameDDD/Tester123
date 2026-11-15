@@ -11,7 +11,7 @@ public class SightUpPage extends BETA_TEST {
 
 
     public SightUpPage openSignUpPage() {
-        open("https://thinking-tester-contact-list.herokuapp.com/");
+        open("");
 
         return this;
 

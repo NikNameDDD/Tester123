@@ -6,6 +6,7 @@ import pages.AddContactPage;
 import pages.ContactListPage;
 import pages.LoginPage;
 import pages.SightUpPage;
+import utils.AuthHelper;
 
 
 public class TestBase {
@@ -17,6 +18,9 @@ public class TestBase {
     protected AddContactPage addContactPage = new AddContactPage();
 
     protected ContactListPage contactListPage = new ContactListPage();
+
+    protected AuthHelper authHelper = new AuthHelper(loginPage);
+
 
     @BeforeAll
     static void BeforeAll() {

@@ -5,7 +5,6 @@ import utils.CONSTANTS;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
@@ -13,8 +12,8 @@ public class LoginPage extends BETA_TEST {
 
 
     public LoginPage openPage() {
-        open("https://thinking-tester-contact-list.herokuapp.com/");
-        $(".welcome-message").shouldHave(text(CONSTANTS.WELCOME_MESSAGE));
+        open("");
+        getElements().welcomeMessageWords.shouldHave(text(CONSTANTS.WELCOME_MESSAGE));
 
         return this;
 

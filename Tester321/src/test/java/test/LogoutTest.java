@@ -1,6 +1,6 @@
 package test;
 
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.ContactListPage;
@@ -15,7 +15,7 @@ public class LogoutTest extends TestBase {
     @BeforeEach
     void setUp() {
         AuthHelper.login(CONSTANTS.VALID_EMAIL, CONSTANTS.VALID_PASSWORD);
-        // Инициализируем объекты заново перед каждым тестом
+
         contactListPage = new ContactListPage();
         sightUpPage = new SightUpPage();
     }

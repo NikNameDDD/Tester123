@@ -63,6 +63,6 @@ public class CONSTANTS {
     public static final String CONTACT_DETAILS_BIG_NOTE = "Contact Details";
 
     private CONSTANTS() {
-        // Utility class: запрещаем создание объекта
+
     }
 }

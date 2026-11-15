@@ -34,6 +34,7 @@ public class SelenideElements {
             stateOfProvinceInput = $("#stateProvince"),
             postalCodeInput = $("#postalCode"),
             countryInput = $("#country"),
+            welcomeMessageWords = $(".welcome-message"),
             addNewContactButton = $("#add-contact");
 
 

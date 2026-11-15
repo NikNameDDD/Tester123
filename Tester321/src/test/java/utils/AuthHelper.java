@@ -1,15 +1,20 @@
 package utils;
 
 import pages.LoginPage;
+import test.TestBase;
 
 public class AuthHelper {
 
+    private final LoginPage loginPage;
 
-    // Метод стал универсальным и принимает любые данные
+    public AuthHelper(LoginPage loginPage) {
+        this.loginPage = loginPage;
+    }
+
     public static LoginPage login(String email, String password) {
         LoginPage loginPage = new LoginPage();
 
-        loginPage.openPage()
+         loginPage.openPage()
                 .setEmail(email)
                 .setPassword(password);
 
