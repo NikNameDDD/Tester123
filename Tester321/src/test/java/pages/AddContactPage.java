@@ -1,13 +1,11 @@
 package pages;
 
-
 import utils.BETA_TEST;
 import utils.CONSTANTS;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
-
 
 public class AddContactPage extends BETA_TEST {
 
@@ -50,6 +48,7 @@ public class AddContactPage extends BETA_TEST {
         getElements().submitButton.shouldBe(visible, enabled);
 
         return this;
+
     }
 
     //----------------------------------------------------------------------------------------------------------------
@@ -67,7 +66,6 @@ public class AddContactPage extends BETA_TEST {
         return this;
 
     }
-
 
     public AddContactPage inputDateOfBirthForAddContact(String value) {
         getElements().dateOfBirthInput.setValue(value);
@@ -141,10 +139,17 @@ public class AddContactPage extends BETA_TEST {
 
     public boolean errorMessageIsDisplayed() {
         return getElements().errorMessage.shouldBe(visible).isDisplayed();
-
     }
 
+    public AddContactPage verifyErrorMessageContains(String expectedText) {
+        String actualErrorText = getElements().errorMessage
+                .shouldBe(visible)
+                .shouldHave(text(expectedText))
+                .getText();
 
+        System.out.println("Текст ошибки на странице: " + actualErrorText);
 
+        return this;
+
+    }
 }
-
